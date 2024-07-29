@@ -3,52 +3,58 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-blue-100 justify-center items-center">
-      <div className="flex max-w-full md:max-w-screen-lg rounded-md flex-col sm:flex-row">
-        <div className="flex flex-col bg-white p-6 min-h-full gap-2">
-          <div className="relative">
-            <h2 className="font-semibold">Mortgage Calculator</h2>
+      <div className="flex max-w-full md:max-w-screen-lg rounded-lg flex-col sm:flex-row gap-4 md:gap-0">
+        <div className="flex flex-col bg-white p-6 pr-14 min-h-full gap-2  rounded-lg max-w-[500px]">
+          <div className="relative mb-4">
+            <h2 className="font-semibold ">Mortgage Calculator</h2>
             <button className="absolute top-0 bottom-0 right-0 underline text-gray-500 font-500">
               Clear All
             </button>
           </div>
 
-          <input
-            type="number"
-            name="mortgage"
-            id="mortgage"
-            className="border-gray-300 border-[1px] rounded-sm p-2"
-          />
+          <label
+            htmlFor="mortgage"
+            className="flex flex-col text-gray-500 font-semibold"
+          >
+            Mortgage Amount
+            <input
+              type="number"
+              name="mortgage"
+              id="mortgage"
+              className="border-gray-300 border-[1px] rounded-sm p-2"
+            />
+          </label>
 
-          <div className="flex gap-2 md:gap-4 flex-col md:flex-row">
-            <div className="flex flex-col">
-              <label htmlFor="term" className="text-gray-500 font-500">
-                Mortgage Term
-              </label>
+          <div className="flex flex-col md:flex-row gap-2">
+            <label
+              htmlFor="mortgage_term"
+              className="flex flex-col text-gray-500 font-semibold flex-1"
+            >
+              Mortgage Term
               <input
                 type="text"
-                name="term"
-                id="term"
-                className="border-gray-300 border-[1px] rounded-sm p-2"
+                name="mortgage_term"
+                id="mortgage_term"
+                className="border-gray-300 border-[1px] rounded-sm p-2 w-full"
               />
-            </div>
+            </label>
 
-            <div className="flex flex-col ">
-              <label htmlFor="interest" className="text-gray-500 font-500">
-                Interest Rate
-              </label>
+            <label
+              htmlFor="interest_rate"
+              className="flex flex-col text-gray-500 font-semibold flex-1"
+            >
+              Interest Rate
               <input
                 type="text"
-                name="interest"
-                id="interest"
-                className="border-gray-300 border-[1px] rounded-sm p-2"
+                name="interest_rate"
+                id="interest_rate"
+                className="border-gray-300 border-[1px] rounded-sm p-2 w-full"
               />
-            </div>
+            </label>
           </div>
 
-          <label htmlFor="mortgage_type" className="text-gray-500 font-500">
-            Mortgage Type
-          </label>
           <div className="flex flex-col gap-2">
+            <h2 className="text-gray-500 font-semibold">Mortgage Type</h2>
             <div className="flex gap-2 p-2 border-gray-300 border-[1px] rounded-sm">
               <label htmlFor="repayment" className="flex gap-2">
                 <input
@@ -75,8 +81,8 @@ export default function Home() {
         </div>
 
         <div
-          className="flex flex-col bg-sky-950 min-h-full rounded-tl-none rounded-bl-xl w-full p-6 text-white
-        gap-4"
+          className="flex flex-col bg-sky-950 min-h-full rounded-lg rounded-tl-none rounded-bl-[50px] p-6
+         text-white gap-4 translate-x-[-40px] max-w-[500px]"
         >
           <h2 className="font-semibold">Your results</h2>
           <p className="text-sm">
