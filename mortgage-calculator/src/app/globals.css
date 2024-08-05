@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 :root {
-  color: "black";
+  --primary-color: black;
+  --font-family-primary: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  color: var(--primary-color);
+  font-family: var(--font-family-primary);
 }
