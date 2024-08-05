@@ -298,7 +298,7 @@ export default function MortgageForm() {
       <div
         id="right-side"
         className="flex flex-col bg-slate-700 min-h-full rounded-lg rounded-tl-none rounded-bl-[50px] p-6
-      text-white gap-4 translate-x-[-40px] max-w-[400px]"
+      text-white gap-4 md:translate-x-[-40px] max-w-[400px]"
       >
         <h2 className="font-semibold text-white">Your results</h2>
         <p className="text-sm">
